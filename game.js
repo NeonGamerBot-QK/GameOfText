@@ -10,7 +10,7 @@ function startGame() {
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
-  textElement.innerText = textNode.text;
+  textElement.innerHTML = textNode.text;
 }
 
 function selectOption(option) {}
@@ -20,7 +20,7 @@ const textNodes = [
     id: 1,
     text: "You see a sword beside you...",
     options: [
-      { text: "Take it", setState: { sword: True }, nextText: 2 },
+      { text: "Take it", setState: { sword: true }, nextText: 2 },
       { text: "Leave it", nextText: 2 },
     ],
   },

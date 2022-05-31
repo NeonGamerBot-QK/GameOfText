@@ -1,3 +1,7 @@
+function distanceFromCenter(boxPosition, mousePosition, boxSize) {
+  return boxPosition - mousePosition + boxSize / 2;
+}
+
 function adv() {
   location.href = "/pages/adventure.html";
 }

@@ -55,10 +55,43 @@ const textNodes = [
     options: [
       {
         text: "You ask people where you are",
-        //requiredState: (currentState) => currentState.sword,
+        setState: { friends: true },
+
         nextText: 3,
       },
-      { text: "You explore the world", nextText: 4 },
+      {
+        text: "You explore the world",
+        setState: { knowledge: true },
+        nextText: 4,
+      },
+    ],
+  },
+  {
+    id: 3,
+    text: "People tell you that this is a planet which is just like an RPG and you make some friends!",
+    options: [
+      {
+        text: "Explore the world",
+        setState: { knowledge: true },
+        nextText: 4,
+      },
+      {
+        text: "You sit on a bench on a park",
+        nextState: 5,
+      },
+    ],
+  },
+  {
+    id: 4,
+    text: "You learn that this world is going to be attacked by interstellar monsters...",
+    options: [
+      {
+        text: "You get ready to fight!",
+        setState: { fight: true },
+        requiredState: (currentState) => currentState.sword,
+        nextState: 6,
+      },
+      { text: "You ignore it as it's probably just a rumour", nextState: 5 },
     ],
   },
 ];

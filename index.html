@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles.css" rel="stylesheet" />
-    <script defer src="game.js"></script>
+    <link href="index.css" rel="stylesheet" />
+    <script src="index.js"></script>
     <title>GameOfText</title>
   </head>
   <body>
     <div class="container">
-      <div id="text">Text</div>
+      <div id="text">Which GameOfText would you like to play?</div>
       <div id="option-buttons" class="btn-grid">
-        <button class="btn">Button 1</button>
-        <button class="btn">Button 2</button>
-        <button class="btn">Button 3</button>
-        <button class="btn">Button 4</button>
+        <button class="btn" onclick="adv()">Adventure</button>
+        <button class="btn" onclick="fantasy()">Fantasy</button>
+        <button class="btn" onclick="scifi()">Sci-Fi</button>
+        <button class="btn" onclick="magic()">Magic</button>
       </div>
     </div>
   </body>

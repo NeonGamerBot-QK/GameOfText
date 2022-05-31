@@ -77,7 +77,7 @@ const textNodes = [
       },
       {
         text: "You sit on a bench on a park",
-        nextState: 5,
+        nextText: 5,
       },
     ],
   },
@@ -89,9 +89,35 @@ const textNodes = [
         text: "You get ready to fight!",
         setState: { fight: true },
         requiredState: (currentState) => currentState.sword,
-        nextState: 6,
+        nextText: 6,
       },
-      { text: "You ignore it as it's probably just a rumour", nextState: 5 },
+      {
+        text: "You hide in the nearest building",
+        setState: { shelter: true },
+        nextText: 6,
+      },
+      { text: "You ignore it as it's probably just a rumour", nextText: 5 },
+    ],
+  },
+  {
+    id: 5,
+    text: "You hear some rumbling noises... And then you are killed by some interstellar monsters...",
+    options: [{ text: "Restart", nextText: -1 }],
+  },
+  {
+    id: 6,
+    text: "The monsters arrived...",
+    options: [
+      {
+        text: "You get out of the building",
+        requiredState: (currentState) => currentState.shelter,
+        setState: { shelter: false },
+        nextText: 8,
+      },
+      {
+        text: "You fight",
+        nextText: 7,
+      },
     ],
   },
 ];

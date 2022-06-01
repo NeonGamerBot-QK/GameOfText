@@ -83,13 +83,13 @@ const textNodes = [
   },
   {
     id: 4,
-    text: "You learn that this world is going to be attacked by interstellar monsters...",
+    text: "You learn that this world is going to be attacked by monsters...",
     options: [
       {
         text: "You get ready to fight!",
         setState: { fight: true },
         requiredState: (currentState) => currentState.sword,
-        nextText: 6,
+        nextText: 9,
       },
       {
         text: "You hide in the nearest building",
@@ -101,22 +101,22 @@ const textNodes = [
   },
   {
     id: 5,
-    text: "You hear some rumbling noises... And then you are killed by some interstellar monsters...",
+    text: "You hear some rumbling noises... And then you are killed by the monsters...",
     options: [{ text: "Restart", nextText: -1 }],
   },
   {
     id: 6,
-    text: "The monsters arrived...",
+    text: "The monsters arrived... And they are just beside the building you're in.",
     options: [
       {
-        text: "You get out of the building",
+        text: "You get out of the building and seek shelter somewhere else",
         requiredState: (currentState) => currentState.shelter,
-        setState: { shelter: false },
         nextText: 8,
       },
       {
-        text: "You fight",
-        nextText: 7,
+        text: "You stay where you are",
+        requiredState: (currentState) => currentState.shelter,
+        nextText: 5,
       },
     ],
   },

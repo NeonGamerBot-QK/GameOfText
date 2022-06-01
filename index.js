@@ -10,6 +10,10 @@ function fantasy() {
   location.href = "/pages/fantasy.html";
 }
 
+function anime() {
+  location.href = "/pages/anime.html";
+}
+
 function scifi() {
   location.href = "/pages/scifi.html";
 }

@@ -81,45 +81,5 @@ const textNodes = [
       },
     ],
   },
-  {
-    id: 4,
-    text: "You learn that this world is going to be attacked by monsters...",
-    options: [
-      {
-        text: "You get ready to fight!",
-        setState: { fight: true },
-        requiredState: (currentState) => currentState.sword,
-        nextText: 9,
-      },
-      {
-        text: "You hide in the nearest building",
-        setState: { shelter: true },
-        nextText: 6,
-      },
-      { text: "You ignore it as it's probably just a rumour", nextText: 5 },
-    ],
-  },
-  {
-    id: 5,
-    text: "You hear some rumbling noises... And then you are killed by the monsters...",
-    options: [{ text: "Restart", nextText: -1 }],
-  },
-  {
-    id: 6,
-    text: "The monsters arrived... And they are just beside the building you're in.",
-    options: [
-      {
-        text: "You get out of the building and seek shelter somewhere else",
-        requiredState: (currentState) => currentState.shelter,
-        nextText: 8,
-      },
-      {
-        text: "You stay where you are",
-        requiredState: (currentState) => currentState.shelter,
-        nextText: 5,
-      },
-    ],
-  },
-];
 
 startGame();

@@ -81,5 +81,6 @@ const textNodes = [
       },
     ],
   },
+]
 
 startGame();

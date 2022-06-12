@@ -56,7 +56,6 @@ const textNodes = [
       {
         text: "You ask people where you are",
         setState: { friends: true },
-
         nextText: 3,
       },
       {
